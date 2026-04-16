@@ -1,0 +1,23 @@
+.stats {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stat {
+    flex: 1;
+}
+
+.number {
+    font-size: 28px;
+    font-weight: 600;
+    color: #5DD62C;
+}
+
+.label {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #374151;
+}

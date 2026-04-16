@@ -1,0 +1,70 @@
+/* бургер */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* оверлей */
+.burgerOverlay {
+    position: fixed;
+    inset: 0;
+    height: 100dvh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    animation: overlayFade 0.25s ease forwards;
+}
+
+/* меню по центру */
+.menu-center {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    text-align:center;
+    background: #fff;
+    padding: 32px 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 320px;
+    text-align: center;
+    transform: scale(0.9) translateY(10px);
+    opacity: 0;
+    animation: menuPop 0.25s ease forwards;
+}
+
+.XCross {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    color: #202020;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+@keyframes overlayFade {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menuPop {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

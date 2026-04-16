@@ -1,0 +1,154 @@
+﻿#root {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.contact {
+    background-color: white;
+    color: #202020;
+    border-radius: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 80px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+    .contact h2 {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #555;
+}
+
+.contact-grid {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+/* Левая часть */
+.contact-info h4 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.info-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+    .info-item span {
+        font-size: 20px;
+    }
+    .info-item strong {
+        font-size: 20px;
+    }
+    .info-item p {
+        font-size: 20px;
+    }
+
+/* Правая часть */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 12px;
+}
+    .contact-form input::placeholder{
+        color: #ff7878;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px 16px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: white;
+        color: #202020;
+    }
+
+    .contact-form button {
+        margin-top: 16px;
+        padding: 14px;
+        border-radius: 999px;
+        border: none;
+        background: #16a34a;
+        color: #fff;
+        cursor: pointer;
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+        .contact-form button:disabled {
+            background: #35c2b9;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+.errorMessage {
+    color: #ff0000;
+}
+
+.succesMessage{
+    color: #16a34a;
+}
+
+.desktopErrorMessages {
+    display: block;
+}
+
+.mobileErrorMessages {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .contact{
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+        .contact h2{
+            font-size: 26px;
+        }
+    .subtitle{
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+    .contact-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .contact-form {
+        min-width: 0;
+        width: 100%;
+    }
+        .contact-form input,
+        .contact-form button,
+        .contact-form div,
+        .contact-form p,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+    .desktopErrorMessages {
+        display: none;
+    }
+    .mobileErrorMessages {
+        display: block;
+    }
+}

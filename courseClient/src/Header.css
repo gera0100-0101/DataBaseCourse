@@ -1,0 +1,102 @@
+﻿header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 32px;
+    background-color: #202020;
+    border-end-start-radius: 16px;
+    border-end-end-radius: 16px;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+    header div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    header .contactInfo {
+        display: block;
+        align-items: center;
+    }
+
+    header.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    header.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    justify-content: right;
+}
+
+    .cont .text {
+        line-height: 1;
+        font-size: 16px;
+        display: block;
+    }
+
+    .cont .icon {
+        display: block;
+    }
+
+.telegramButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+    .telegramButton:hover {
+        color: #0088CC;
+    }
+
+.commercialName{
+    gap: 20px;
+}
+
+.logo{
+    height: 60px;
+}
+
+.mobileDiv {
+    display: none;
+}
+@media (max-width: 768px) {
+    .nav,
+    .contacts {
+        display: none; /* 🔥 прячем лишнее */
+    }
+    .mobileDiv{
+        display: block;
+    }
+    .commercialName {
+        gap: 0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

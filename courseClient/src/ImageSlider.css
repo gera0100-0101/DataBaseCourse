@@ -1,0 +1,133 @@
+.slide {
+    position: relative;
+}
+
+.desktopElement {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: 24px;
+    display: block;
+}
+.mobileElement {
+    display: none;
+}
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+    .slide-text h2 {
+        margin: 0;
+        font-size: 56px;
+    }
+
+    .slide-text p {
+        margin: 4px 0 0;
+        font-size: 24px;
+    }
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to top, rgba(0,0,0,0.6), rgba(0,0,0,0) );
+    border-radius: 16px;
+}
+
+.slide-text {
+    position: absolute;
+    z-index: 2;
+}
+
+.slider-wrapper {
+    position: relative; /* ﬂ Œ–‹ */
+}
+
+.projectSlider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.3s ease;
+}
+    .slider-prev:hover,
+    .slider-next:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+    .slider-prev:active,
+    .slider-next:active {
+        background: rgba(255, 255, 255, 0.25);
+    }
+.slider-prev {
+    left: 16px; /* ¬Õ”“–» ÒÎÂ‚‡ */
+}
+
+.slider-next {
+    right: 16px; /* ¬Õ”“–» ÒÔ‡‚‡ */
+}
+
+@media (max-width: 768px) {
+    .slide-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+
+    .desktopElement {
+        display: none;
+    }
+
+    .mobileElement {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-top: 24px;
+        display: block;
+    }
+
+        .slide-text h2 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .slide-text p {
+            margin: 4px 0 0;
+            font-size: 18px;
+        }
+    .slider-prev,
+    .slider-next {
+        top: 85%;
+        transform: translateY(15%);
+    }
+        .slider-prev:hover,
+        .slider-next:hover {
+            transform: translateY(15%) scale(1.1);
+        }
+
+        .slider-prev:active,
+        .slider-next:active {
+            background: rgba(255, 255, 255, 0.25);
+        }
+}
