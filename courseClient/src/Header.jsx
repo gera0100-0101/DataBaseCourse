@@ -49,7 +49,7 @@ export default function Header() {
                 <Button className="headerButton" onClick={() => navigationSubmit("")}>Главная</Button>
                 <Button className = "headerButton" onClick={() => navigationSubmit("services")}>Услуги</Button>
                 <Button className="headerButton" onClick={() => navigationSubmit("projects")}>Портфолио</Button>
-                <Button className="headerButton" onClick={() => navigationSubmit("contact")}>Контакты</Button>
+                {/* <Button className="headerButton" onClick={() => navigationSubmit("contact")}>Контакты</Button> */}
                 <div className="contactInfo">
                     <div className="cont">
                         <span>test@mail.ru</span><Mail></Mail>
